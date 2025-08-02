@@ -1,0 +1,58 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professor Hackmenomore</title>
+  <!-- Tailwind CSS CDN (for prototyping only) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex h-screen bg-gray-100">
+  <!-- Sidebar -->
+  <aside class="w-1/4 bg-white p-4 border-r overflow-auto">
+    <h2 class="text-xl font-bold mb-4">Modules</h2>
+    <nav class="space-y-2">
+      <button data-module="phishing" class="block text-left w-full hover:text-blue-500">Phishing</button>
+      <button data-module="password" class="block text-left w-full hover:text-blue-500">Password Safety</button>
+      <button data-module="mfa" class="block text-left w-full hover:text-blue-500">Multi-Factor Authentication</button>
+      <button data-module="social" class="block text-left w-full hover:text-blue-500">Social Engineering</button>
+      <button data-module="browsing" class="block text-left w-full hover:text-blue-500">Secure Browsing</button>
+    </nav>
+
+    <div class="mt-6">
+      <h2 class="text-lg font-semibold">URL Checker</h2>
+      <form id="urlCheckerForm" class="mt-2 flex">
+        <input id="urlInput" type="url" required placeholder="Paste suspicious URL"
+               class="flex-1 px-2 py-1 border rounded-l focus:outline-none" />
+        <button type="submit" class="bg-blue-600 text-white px-4 rounded-r">Check URL</button>
+      </form>
+      <div id="urlResult" class="mt-2 text-sm text-red-600"></div>
+    </div>
+
+    <!-- Cyber News Box -->
+    <div id="newsBox" class="mt-6 p-4 bg-white rounded shadow max-h-[70vh] overflow-auto">
+      <h2 class="text-lg font-semibold mb-2">Latest Cybersecurity News</h2>
+      <div id="newsContent" class="text-sm text-gray-700">Loading news…</div>
+    </div>
+  </aside>
+
+  <!-- Chat Area -->
+  <main class="flex-1 flex flex-col">
+    <header class="p-4 border-b bg-white">
+      <h1 class="text-2xl font-bold">Professor Hackmenomore</h1>
+    </header>
+    <div id="chatWindow" class="flex-1 p-4 overflow-auto bg-gray-50"></div>
+    <footer class="p-4 border-t bg-white">
+      <form id="chatForm" class="flex">
+        <input id="chatInput" type="text" placeholder="Type your question..."
+               required class="flex-1 px-3 py-2 border rounded-l focus:outline-none" />
+        <button type="submit" class="bg-green-600 text-white px-4 rounded-r">Send</button>
+      </form>
+    </footer>
+  </main>
+
+  <!-- Client-side script -->
+  <script src="script.js"></script>
+</body>
+</html>
