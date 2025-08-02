@@ -8,3 +8,6 @@ Otherwise, leave MOCK_MODE=true to run entirely locally
 npm install
 node server.js
 Open index.html in your browser
+
+NPM install
+NPM start (to start the appliaction)
